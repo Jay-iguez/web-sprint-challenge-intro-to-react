@@ -4,12 +4,13 @@
   font-size: 2.5rem;
   font-family: "Michroma";
   font-weight: bold;
-  font-stretch: expanded;
-}
-.Header {
   display: flex;
   flex-flow: column;
+  justify-content: center;
   margin: 0 20%;
-  border: 2px solid red;
+  margin-top: 15%;
+  border: .2rem solid #88A8B7;
+  background-color: rgba(136, 168, 183, 0.2);
 }
+
 /* write your parent styles in here for your App.js */
