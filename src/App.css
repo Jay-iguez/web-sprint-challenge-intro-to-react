@@ -7,8 +7,7 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
-  margin: 0 20%;
-  margin-top: 15%;
+  margin: 6rem 20%;
   border: .2rem solid #88A8B7;
   background-color: rgba(136, 168, 183, 0.2);
 }
