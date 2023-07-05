@@ -2,26 +2,9 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 
 export default function CharacterLogic(props) {
+
     const [character, setCharacter] = useState([])
     const [selectedCharacter, setSelectedCharacter] = useState(null)
-    console.log(character)
-    useEffect(() => {
-        setCharacter(props.characters)
-    }, [props.characters])
-
-    function clickCharacter(character) {
-        if (!selectedCharacter) {
-            setSelectedCharacter(character)
-        } else if (selectedCharacter) {
-            setSelectedCharacter(null)
-        }
-    }
-
-    function defineCharacters(character, index) {
-            return (
-                <p onClick={() => clickCharacter(character, index)}>{(character.name).toUpperCase()}</p>
-            )
-    }
 
     const ParentCharacterContainer = styled.div`
     margin: 3rem 0;
@@ -51,6 +34,26 @@ export default function CharacterLogic(props) {
         color: black;
     }
     `
+
+    useEffect(() => {
+        setCharacter(props.characters)
+    }, [props.characters])
+
+    function clickCharacter(character) {
+        if (!selectedCharacter) {
+            setSelectedCharacter(character)
+        } else if (selectedCharacter) {
+            setSelectedCharacter(null)
+        }
+    }
+
+    function defineCharacters(character, index) {
+            return (
+                <>
+                 <p onClick={() => clickCharacter(character, index)} key={index + Math.random()}>{(character.name).toUpperCase()}</p>
+                </>
+            )
+    }
 
     return (
         <>

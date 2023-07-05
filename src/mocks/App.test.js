@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import App from "./App";
-import { server } from "./mocks/server";
+import App from "../App";
+import { server } from "../mocks/server";
 import "mutationobserver-shim";
 
 beforeAll(() => server.listen());
@@ -43,3 +43,4 @@ describe("<App />, Review creating a React component, using JavaScript modules t
     expect(await screen.findByText(/Owen/i)).toBeInTheDocument();
   });
 });
+
