@@ -1,8 +1,15 @@
 .App {
   text-align: center;
+  color: #78BBEF;
+  font-size: 2.5rem;
+  font-family: "Michroma";
+  font-weight: bold;
+  font-stretch: expanded;
 }
 .Header {
-  color: #443e3e;
-  text-shadow: 1px 1px 5px #fff;
+  display: flex;
+  flex-flow: column;
+  margin: 0 20%;
+  border: 2px solid red;
 }
 /* write your parent styles in here for your App.js */
