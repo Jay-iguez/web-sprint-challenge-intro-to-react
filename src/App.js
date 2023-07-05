@@ -14,11 +14,12 @@ const App = () => {
   const mainBody = document.querySelector("body")
   mainBody.style.background = "linear-gradient(to right, #3f505a, #1F2935)"
 
+
   useEffect(() => {
   axios.get("https://swapi.dev/api/people/")
   .then(res => {
-    //console.log(res.data)
-    setCharacters(res.data.results)
+    console.log(res.data)
+    setCharacters(res.data)
   })
   .catch(err => {
     console.log(err)

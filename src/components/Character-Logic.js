@@ -2,10 +2,9 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 
 export default function CharacterLogic(props) {
-
-    const [character, setCharacter] = useState([])
+    // const [character, setCharacter] = useState([])
     const [selectedCharacter, setSelectedCharacter] = useState(null)
-
+    console.log(props)
     const ParentCharacterContainer = styled.div`
     margin: 3rem 0;
     position: relative;
@@ -35,9 +34,11 @@ export default function CharacterLogic(props) {
     }
     `
 
-    useEffect(() => {
+    /*useEffect(() => {
         setCharacter(props.characters)
     }, [props.characters])
+    */
+    
 
     function clickCharacter(character) {
         if (!selectedCharacter) {
@@ -58,16 +59,16 @@ export default function CharacterLogic(props) {
     return (
         <>
         <ParentCharacterContainer>
-            { !selectedCharacter ? 
-                character.map((character, index) => {
+            { !selectedCharacter ? (
+                props.characters.map((character, index) => {
                    return defineCharacters(character, index)})  
-                   : 
+                    ) : (
                    <>
                     {Object.keys(selectedCharacter).map((key) => (
                         <p>{(key).toUpperCase()} : {(selectedCharacter[key])}</p>
                     ))}
                     <BackCharacterButton onClick={clickCharacter}>BACK</BackCharacterButton>
-                   </>
+                   </>)
             }
         </ParentCharacterContainer>
         </>
