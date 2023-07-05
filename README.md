@@ -72,7 +72,12 @@ After finishing your required elements, you can push your work further. These go
 
 ## Stretch Interview Questions
 
-1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the 
+web.
+React JS is a very large-open source library for web developers to utilze for large complex applications and small scale projects alike. It allows modularity with Components, what React essentially calls functions within JavaScript. You can customize these Components and use them in a stackable fashion that allows developers to build out websites in an efficient manner, and this results in easier to maintain codebases during needed changes from not just one but multiple developers at any given time. This means React essentially is an abstraction of the DOM - you are simply manipulating it when the app needs to.
 1. Describe component state.
+Component state is what said Component will use to track data between itself and it's children who it may pass it's state to. It is regarded as the "single source of truth". Invoking state means setting a tuple - a stateVariable and setStateVariable. It allows the Component to see what data changed within its state - and itself can change it using the setStateVariable in this case. Anytime state changes, it will cause a re-render of the Component - the beauty of it is you can create it such in a way with React where it will only re-render exactly what it needs to and nothing else.
 1. Describe props.
+Props in Components are that of data or input in which they recieve from their parent Components. You can use dot.notation or bracket.notation to recieve them in a child Component. They are the data in which the Component will act on and iterate over - and can even be used to pass state. Props is just an object with key/value pairs you assign to it depending on how you want to give/recieve a given props in a Component.
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+Side effects in React are changes around  Component that are out of it's direct control, and to make use of these in order to properly render them to the Component we must use a useEffect hook. These will not render/be-invoked until the page is initialized. These are especially useful in regards to API calls and asynchronous code. You can render your component that will eventually rely on data outside of your program without it crashing or failing to load because said data hasn't reached the user's system yet.
