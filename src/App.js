@@ -24,8 +24,6 @@ const App = () => {
     console.log(err)
   })
   }, []);
-  
-  console.log(characters)
 
   return (
     <div className="App">
